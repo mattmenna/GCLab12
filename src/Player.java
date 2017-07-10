@@ -8,7 +8,7 @@ public abstract class Player{
         PAPER, ROCK, SCISSORS;
     }
 
-    private String playerName;
+    public String playerName;
 
 
     @Override
@@ -28,16 +28,5 @@ public abstract class Player{
                 return "Error in switch";
         }
 
-
-//        if(input.equalsIgnoreCase("dumb"))
-//        {
-//            return Roshambo.ROCK.toString();
-//        }else if (input.equalsIgnoreCase("random"))
-//        {
-//            // need to add random code
-//            return Roshambo.PAPER.toString();
-//        }
-//        else
-//        return Roshambo.SCISSORS.toString();
     } // end generateRoshambo
 }

@@ -8,11 +8,12 @@ public class RoshamboClass {
     public static void main(String[] args) {
         System.out.println("Rock, paper, scissors!");
 
-        DumbPlayer dP = new DumbPlayer();
-        RandomPlayer rP = new RandomPlayer();
-        HumanPlayer hP = new HumanPlayer();
+        DumbPlayer dP = new DumbPlayer("Dumb Player");
+        RandomPlayer rP = new RandomPlayer("Random Player");
+        HumanPlayer hP = new HumanPlayer("Human Player");
+
         System.out.println("Dumb Player picks" + dP.generateRoshambo("dumb"));
         System.out.println("Random Player picks" + rP.generateRoshambo("random"));
-        System.out.println("Random Player picks" + rP.generateRoshambo("human"));
+        System.out.println("Human Player picks" + rP.generateRoshambo("human"));
     }
 }
