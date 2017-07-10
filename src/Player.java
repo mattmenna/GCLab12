@@ -8,6 +8,17 @@ public abstract class Player{
         PAPER, ROCK, SCISSORS;
     }
 
+    /*
+   PAPER ordinal 0
+   ROCK ordinal 1
+   SCISSORS ordinal 2
+
+   Paper beats Rock------------------ 0 beats 1
+   Rock beats Scissors --------------1 beats 2
+   Scissors beats paper -------------2 beats 0
+
+     */
+
     public String playerName;
 
 
