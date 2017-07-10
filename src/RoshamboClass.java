@@ -61,4 +61,6 @@ scnr.nextLine();
                 break;
         }
     }
+
+    private static void winCondition(){}
 }
