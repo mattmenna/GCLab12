@@ -6,7 +6,10 @@ import java.util.Random;
 public class RoshamboClass {
 
     public static void main(String[] args) {
+
         System.out.println("Rock, paper, scissors!");
+
+        MyValidator validator = new MyValidator();
 
         DumbPlayer dP = new DumbPlayer("Dumb Player");
         RandomPlayer rP = new RandomPlayer("Random Player");
@@ -14,6 +17,6 @@ public class RoshamboClass {
 
         System.out.println("Dumb Player picks" + dP.generateRoshambo("dumb"));
         System.out.println("Random Player picks" + rP.generateRoshambo("random"));
-        System.out.println("Human Player picks" + rP.generateRoshambo("human"));
+        System.out.println("Human Player picks" + hP.generateRoshambo("human"));
     }
 }
