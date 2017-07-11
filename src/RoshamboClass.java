@@ -9,12 +9,11 @@ public class RoshamboClass {
     public static void main(String[] args) {
 
         Scanner scnr = new Scanner(System.in);
-
-        System.out.println("Rock, paper, scissors!");
         boolean cont = true;
-
         MyValidator validator = new MyValidator();
 
+
+        System.out.println("Rock, paper, scissors!");
         String playerName = validator.getRequiredString("What is your Name?");
 
         DumbPlayer dP = new DumbPlayer("Dumb Player");
