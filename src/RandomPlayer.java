@@ -10,8 +10,8 @@ public class RandomPlayer extends Player {
     @Override
     public String generateRoshambo(String input) {
         int range = (3 - 1) + 1;
-        int randomInt = (int)(Math.random() * range) + 1;
-        switch (randomInt){
+        int randomInt = (int) (Math.random() * range) + 1;
+        switch (randomInt) {
             case 1:
                 System.out.println("Rock");
                 return Roshambo.ROCK.toString();

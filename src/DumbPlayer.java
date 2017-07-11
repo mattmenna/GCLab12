@@ -13,5 +13,4 @@ public class DumbPlayer extends Player {
         return Roshambo.ROCK.toString();
     }
 
-
 }

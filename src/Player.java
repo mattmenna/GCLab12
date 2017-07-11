@@ -30,5 +30,5 @@ public abstract class Player {
     public String generateRoshambo(String input) {
         return Roshambo.valueOf(input.toUpperCase()).toString();
 
-} // end generateRoshambo
+    } // end generateRoshambo
 }

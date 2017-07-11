@@ -21,12 +21,8 @@ public class RoshamboClass {
         RandomPlayer rP = new RandomPlayer("Random Player");
         HumanPlayer hP = new HumanPlayer(playerName);
 
-
         System.out.println("Hi " + playerName + ". Who do you want to play against? Enter 1 or 2");
         int caseNumber = scnr.nextInt();
-
-        //System.out.println("What do you want to throw?");
-//
 
 
         String humanPlayer = hP.generateRoshambo(validator.getRequiredString("What do you want to throw?"));
@@ -35,25 +31,7 @@ public class RoshamboClass {
         String opponentPlayer = opponent(dP, rP, caseNumber);
         System.out.println("Your Opponent chose " + opponentPlayer);
 
-//            System.out.println("Dumb Player picks" + dP.generateRoshambo("dumb"));
-//            System.out.println("Random Player picks" + rP.generateRoshambo("random"));
-//            System.out.println("Human Player picks" + hP.generateRoshambo("human"));
-
-       // System.out.println(winCondition(humanPlayer, opponentPlayer));
-
         winCondition(humanPlayer, opponentPlayer);
-
-
-    /*
-   PAPER ordinal 0
-   ROCK ordinal 1
-   SCISSORS ordinal 2
-
-   Paper beats Rock------------------ 0 beats 1
-   Rock beats Scissors --------------1 beats 2
-   Scissors beats paper -------------2 beats 0
-
-     */
 
     }
 
