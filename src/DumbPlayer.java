@@ -9,6 +9,7 @@ public class DumbPlayer extends Player {
 
     @Override
     public String generateRoshambo(String input) {
+        System.out.println("Rock");
         return Roshambo.ROCK.toString();
     }
 

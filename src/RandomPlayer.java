@@ -13,12 +13,16 @@ public class RandomPlayer extends Player {
         int randomInt = (int)(Math.random() * range) + 1;
         switch (randomInt){
             case 1:
+                System.out.println("Random Player");
                 return Roshambo.ROCK.toString();
             case 2:
+                System.out.println("Random Player");
                 return Roshambo.PAPER.toString();
             case 3:
+                System.out.println("Random Player");
                 return Roshambo.SCISSORS.toString();
             default:
+                System.out.println("Random Player");
                 return "Error";
         }
     }

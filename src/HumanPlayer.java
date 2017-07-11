@@ -9,6 +9,8 @@ public class HumanPlayer extends Player {
 
     @Override
     public String generateRoshambo(String input) {
-        return Roshambo.valueOf(input.toUpperCase()).toString();
+        String result = Roshambo.valueOf(input.toUpperCase()).toString();
+        System.out.println(result);
+        return result;
     }
 }

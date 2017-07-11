@@ -21,22 +21,22 @@ public class RoshamboClass {
         RandomPlayer rP = new RandomPlayer("Random Player");
         HumanPlayer hP = new HumanPlayer(playerName);
 
-        while (cont = true) {
 
-            System.out.println("Hi " + playerName + ". Who do you want to play against? Enter 1 or 2");
-            int caseNumber = scnr.nextInt();
+        System.out.println("Hi " + playerName + ". Who do you want to play against? Enter 1 or 2");
+        int caseNumber = scnr.nextInt();
 
-            System.out.println("What do you want to throw?");
-            hp.scnr.nextLine();
+        //System.out.println("What do you want to throw?");
+//
 
-            opponent(dP, rP, caseNumber);
+
+        hP.generateRoshambo(validator.getRequiredString("What do you want to throw?"));
+
+        opponent(dP, rP, caseNumber);
 
 //            System.out.println("Dumb Player picks" + dP.generateRoshambo("dumb"));
 //            System.out.println("Random Player picks" + rP.generateRoshambo("random"));
 //            System.out.println("Human Player picks" + hP.generateRoshambo("human"));
 
-            scnr.nextLine();
-            validator.getContinue("Do you want to continue? (y/n: ");
 
 
     /*
@@ -49,7 +49,7 @@ public class RoshamboClass {
    Scissors beats paper -------------2 beats 0
 
      */
-        }
+
     }
 
     private static String opponent(DumbPlayer dP, RandomPlayer rP, int caseNumber) {
