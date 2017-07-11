@@ -3,9 +3,9 @@ import java.util.Random;
 /**
  * Created by Matt on 7/10/2017.
  */
-public abstract class Player{
+public abstract class Player {
     public enum Roshambo {
-        PAPER, ROCK, SCISSORS;
+        PAPER, ROCK, SCISSORS
     }
 
     /*
@@ -27,17 +27,8 @@ public abstract class Player{
         return playerName;
     }
 
-    public String generateRoshambo(String input){
-        switch (input){
-            case "dumb":
-                return Roshambo.ROCK.toString();
-            case "random":
-                return Roshambo.PAPER.toString();
-            case "human":
-                return Roshambo.SCISSORS.toString();
-            default:
-                return "Error in switch";
-        }
+    public String generateRoshambo(String input) {
+        return Roshambo.valueOf(input.toUpperCase()).toString();
 
-    } // end generateRoshambo
+} // end generateRoshambo
 }

@@ -11,7 +11,7 @@ public class RoshamboClass {
         Scanner scnr = new Scanner(System.in);
 
         System.out.println("Rock, paper, scissors!");
-        boolean cont=true;
+        boolean cont = true;
 
         MyValidator validator = new MyValidator();
 
@@ -21,18 +21,21 @@ public class RoshamboClass {
         RandomPlayer rP = new RandomPlayer("Random Player");
         HumanPlayer hP = new HumanPlayer(playerName);
 
-        while (cont=true) {
+        while (cont = true) {
 
             System.out.println("Hi " + playerName + ". Who do you want to play against? Enter 1 or 2");
             int caseNumber = scnr.nextInt();
 
-            opponent(dP, rP, hP, caseNumber);
+            System.out.println("What do you want to throw?");
+            hp.scnr.nextLine();
+
+            opponent(dP, rP, caseNumber);
 
 //            System.out.println("Dumb Player picks" + dP.generateRoshambo("dumb"));
 //            System.out.println("Random Player picks" + rP.generateRoshambo("random"));
 //            System.out.println("Human Player picks" + hP.generateRoshambo("human"));
 
-scnr.nextLine();
+            scnr.nextLine();
             validator.getContinue("Do you want to continue? (y/n: ");
 
 
@@ -47,20 +50,19 @@ scnr.nextLine();
 
      */
         }
-        }
+    }
 
-    private static void opponent(DumbPlayer dP, RandomPlayer rP, HumanPlayer hP, int caseNumber) {
+    private static String opponent(DumbPlayer dP, RandomPlayer rP, int caseNumber) {
         switch (caseNumber) {
             case 1:
-                System.out.println(hP.generateRoshambo("human"));
-                System.out.println(dP.generateRoshambo("dumb"));
-                break;
+                return dP.generateRoshambo("dumb");
             case 2:
-                System.out.println(hP.generateRoshambo("human"));
-                System.out.println(rP.generateRoshambo("random"));
-                break;
+                return rP.generateRoshambo("random");
+            default:
+                return "Error in Opponent";
         }
     }
 
-    private static void winCondition(){}
+    private static void winCondition() {
+    }
 }

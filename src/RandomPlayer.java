@@ -1,7 +1,7 @@
 /**
  * Created by Matt on 7/10/2017.
  */
-public class RandomPlayer extends Player{
+public class RandomPlayer extends Player {
 
     public RandomPlayer(String name) {
         playerName = name;
@@ -9,7 +9,17 @@ public class RandomPlayer extends Player{
 
     @Override
     public String generateRoshambo(String input) {
-        //System.out.println(super.generateRoshambo(input));
-        return super.generateRoshambo(input);
+        int range = (3 - 1) + 1;
+        int randomInt = (int)(Math.random() * range) + 1;
+        switch (randomInt){
+            case 1:
+                return Roshambo.ROCK.toString();
+            case 2:
+                return Roshambo.PAPER.toString();
+            case 3:
+                return Roshambo.SCISSORS.toString();
+            default:
+                return "Error";
+        }
     }
 }
