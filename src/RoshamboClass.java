@@ -15,24 +15,25 @@ public class RoshamboClass {
 
         System.out.println("Rock, paper, scissors!");
         String playerName = validator.getRequiredString("What is your Name?");
+        while (cont) {
+            DumbPlayer dP = new DumbPlayer("Dumb Player");
+            RandomPlayer rP = new RandomPlayer("Random Player");
+            HumanPlayer hP = new HumanPlayer(playerName);
 
-        DumbPlayer dP = new DumbPlayer("Dumb Player");
-        RandomPlayer rP = new RandomPlayer("Random Player");
-        HumanPlayer hP = new HumanPlayer(playerName);
-
-        System.out.println("Hi " + playerName + ". Who do you want to play against? Enter 1 or 2");
-        int caseNumber = scnr.nextInt();
+            System.out.println("Hi " + playerName + ". Who do you want to play against? Enter 1 or 2");
+            int caseNumber = scnr.nextInt();
 
 
-        String humanPlayer = hP.generateRoshambo(validator.getRequiredString("What do you want to throw?"));
-        System.out.println("Your chose " + humanPlayer);
+            String humanPlayer = hP.generateRoshambo(validator.getRequiredString("What do you want to throw?"));
+            System.out.println("Your chose " + humanPlayer);
 
-        String opponentPlayer = opponent(dP, rP, caseNumber);
-        System.out.println("Your Opponent chose " + opponentPlayer);
+            String opponentPlayer = opponent(dP, rP, caseNumber);
+            System.out.println("Your Opponent chose " + opponentPlayer);
 
-        winCondition(humanPlayer, opponentPlayer);
-
-    }
+            winCondition(humanPlayer, opponentPlayer);
+            validator.getContinue("Continue?");
+        }
+    } // end main
 
     private static void winCondition(String humanPlayer, String opponentPlayer) {
         if (humanPlayer.equalsIgnoreCase("Paper") && opponentPlayer.equalsIgnoreCase("Rock")) {
@@ -45,7 +46,7 @@ public class RoshamboClass {
             System.out.println("TIE");
         } else
             System.out.println("Lose");
-    }
+    } // end method
 
     private static String opponent(DumbPlayer dP, RandomPlayer rP, int caseNumber) {
         switch (caseNumber) {
@@ -56,6 +57,6 @@ public class RoshamboClass {
             default:
                 return "Error in Opponent";
         }
-    }
+    } // end method
 
-}
+} // end
