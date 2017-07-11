@@ -29,15 +29,15 @@ public class RoshamboClass {
 //
 
 
-        hP.generateRoshambo(validator.getRequiredString("What do you want to throw?"));
+        String humanPlayer = hP.generateRoshambo(validator.getRequiredString("What do you want to throw?"));
 
-        opponent(dP, rP, caseNumber);
+        String opponentPlayer = opponent(dP, rP, caseNumber);
 
 //            System.out.println("Dumb Player picks" + dP.generateRoshambo("dumb"));
 //            System.out.println("Random Player picks" + rP.generateRoshambo("random"));
 //            System.out.println("Human Player picks" + hP.generateRoshambo("human"));
 
-
+        System.out.println(winCondition(humanPlayer, opponentPlayer));
 
     /*
    PAPER ordinal 0
@@ -63,6 +63,10 @@ public class RoshamboClass {
         }
     }
 
-    private static void winCondition() {
+    private static String winCondition(String humanPlayer, String opponentPlayer) {
+        if(humanPlayer.equalsIgnoreCase(opponentPlayer)){
+            return "Tie";
+        }
+        return "loss";
     }
 }
