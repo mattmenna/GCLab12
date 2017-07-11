@@ -30,14 +30,19 @@ public class RoshamboClass {
 
 
         String humanPlayer = hP.generateRoshambo(validator.getRequiredString("What do you want to throw?"));
+        System.out.println("Your chose " + humanPlayer);
 
         String opponentPlayer = opponent(dP, rP, caseNumber);
+        System.out.println("Your Opponent chose " + opponentPlayer);
 
 //            System.out.println("Dumb Player picks" + dP.generateRoshambo("dumb"));
 //            System.out.println("Random Player picks" + rP.generateRoshambo("random"));
 //            System.out.println("Human Player picks" + hP.generateRoshambo("human"));
 
-        System.out.println(winCondition(humanPlayer, opponentPlayer));
+       // System.out.println(winCondition(humanPlayer, opponentPlayer));
+
+        winCondition(humanPlayer, opponentPlayer);
+
 
     /*
    PAPER ordinal 0
@@ -52,6 +57,19 @@ public class RoshamboClass {
 
     }
 
+    private static void winCondition(String humanPlayer, String opponentPlayer) {
+        if (humanPlayer.equalsIgnoreCase("Paper") && opponentPlayer.equalsIgnoreCase("Rock")) {
+            System.out.println("Win");
+        } else if (humanPlayer.equalsIgnoreCase("Rock") && opponentPlayer.equalsIgnoreCase("Scissors")) {
+            System.out.println("Win");
+        } else if (humanPlayer.equalsIgnoreCase("Scissors") && opponentPlayer.equalsIgnoreCase("Paper")) {
+            System.out.println("Win");
+        } else if (humanPlayer.equalsIgnoreCase(opponentPlayer.toLowerCase())) {
+            System.out.println("TIE");
+        } else
+            System.out.println("Lose");
+    }
+
     private static String opponent(DumbPlayer dP, RandomPlayer rP, int caseNumber) {
         switch (caseNumber) {
             case 1:
@@ -63,10 +81,4 @@ public class RoshamboClass {
         }
     }
 
-    private static String winCondition(String humanPlayer, String opponentPlayer) {
-        if(humanPlayer.equalsIgnoreCase(opponentPlayer)){
-            return "Tie";
-        }
-        return "loss";
-    }
 }
