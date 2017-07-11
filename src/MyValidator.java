@@ -47,11 +47,11 @@ public class MyValidator extends OOValidator {
         //String[] contArray = {"yes", "y"};
         char wCont = 'y';
         while ( wCont != 'n' ) {
-            System.out.println(sInput);
+            //System.out.println(sInput);
             if (sInput.toLowerCase().equals("yes") || sInput.toLowerCase().equals("y")) {
                 return true;
             } else if(sInput.toLowerCase().equals("no") || sInput.toLowerCase().equals("n")){
-                break;
+                return false;
             }
             else {
                 System.out.println("Please try again");

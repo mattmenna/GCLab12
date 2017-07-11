@@ -31,7 +31,8 @@ public class RoshamboClass {
             System.out.println("Your Opponent chose " + opponentPlayer);
 
             winCondition(humanPlayer, opponentPlayer);
-            validator.getContinue("Continue?");
+            System.out.println("Do you want to continue? (y/n):");
+            cont = validator.getContinue(scnr.nextLine());
         }
     } // end main
 
